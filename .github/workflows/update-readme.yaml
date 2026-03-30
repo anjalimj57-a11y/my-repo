@@ -15,7 +15,7 @@ jobs:
 
       - name: Update README timestamp
         run: |
-          DATE=$(date '+%d %B %Y, %I:%M %p IST')
+          DATE=$(TZ=Asia/Kolkata date '+%d %B %Y, %I:%M %p IST')
           sed -i "/Last Updated:/c\Last Updated: $DATE" README.md
 
       - name: Commit changes
